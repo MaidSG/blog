@@ -20,3 +20,5 @@ yarn-error.log*
 *.njsproj
 *.sln
 *.sw?
+/blog-vue/admin/dist/
+/blog-vue/admin/node_modules/
