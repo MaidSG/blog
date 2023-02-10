@@ -10,9 +10,9 @@ spring:
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://你的ip:3306/blog?serverTimezone=Asia/Shanghai&allowMultiQueries=true
-    username: MYSQL用户名
-    password: MYSQL密码
+    url: jdbc:mysql://localhost:3306/blog?serverTimezone=Asia/Shanghai&allowMultiQueries=true
+    username: root
+    password: 512256
     hikari:
       minimum-idle: 5
       # 空闲连接存活最大时间，默认600000（10分钟）
@@ -30,15 +30,17 @@ spring:
       connection-test-query: SELECT 1
   # redis配置
   redis:
-    host: 你的ip
+    host: 43.136.176.80
     port: 6379
-    password: Redis密码
+    password: wy123456
+    timeout: 60s
+
   # mq配置
   rabbitmq:
-    host: 你的ip
+    host: 43.136.176.80
     port: 5672
-    username: rabbitmq用户名
-    password: rabbitmq密码
+    username: guest
+    password: guest
     listener:
       simple:
         retry:
@@ -48,12 +50,12 @@ spring:
   # es配置 若搜索模式为mysql可删除
   elasticsearch:
     rest:
-      uris: 你的IP:9200
+      uris: 43.136.176.80:9200
   # 邮箱配置
   mail:
     host: smtp.qq.com
-    username: 邮箱用户名
-    password: 邮箱授权码
+    username: 512256763@qq.com
+    password: dwtqmnojprekbigb
     default-encoding: UTF-8
     port: 587
     properties:
@@ -82,28 +84,28 @@ search:
 
 # 上传模式 可选 oss或local  （http://和最后的/一定不能去！！！）
 upload:
-  mode: local
+  mode: cos
   local:
     # nginx映射本地文件路径，无域名则为 ip:83
     url: http://你的文件上传子域名/
     # 本地文件存储路径
     path: /usr/local/upload/
   oss:
-    url: http://Bucket域名/
-    endpoint: OSS配置endpoint
-    accessKeyId: OSS配置accessKeyId
-    accessKeySecret: OSS配置accessKeySecret
-    bucketName: OSS配置bucketName
+    url: https://aurora-1312972600.cos.ap-chengdu.myqcloud.com/
+    endpoint: cos.ap-chengdu.myqcloud.com
+    accessKeyId: AKID023FOTUOCvrGdxCMSWWTLAua9e4RjyAH
+    accessKeySecret: 9DDA4yIXn5Lc7d9fItOqvZCpR5iLyZ7e
+    bucketName: aurora-1312972600
   cos:
-    url: http://Bucket域名/
-    secretId: cos的secretId
-    secretKey: cos的secretKey
-    region: cos的region
-    bucketName: cos的bucketName
+    url: https://aurora-1312972600.cos.ap-chengdu.myqcloud.com/
+    secretId: AKID023FOTUOCvrGdxCMSWWTLAua9e4RjyAH
+    secretKey: 9DDA4yIXn5Lc7d9fItOqvZCpR5iLyZ7e
+    region: ap-chengdu
+    bucketName: aurora-1312972600
 
 # 网站前台域名（邮件通知用）
 website:
-  url: http://你的主域名或ip
+  url: http://localhost
 
 #第三方配置信息
 qq:
