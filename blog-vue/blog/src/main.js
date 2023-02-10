@@ -71,8 +71,22 @@ router.afterEach(() => {
   NProgress.done();
 });
 
+
+axios.interceptors.request.use(req => {
+    // 在发送请求前要做的事儿
+    console.log(req)
+    return req
+}, err => {
+    // 在请求错误时要做的事儿
+    console.log('ERR')
+    // 该返回的数据则是axios.catch(err)中接收的数据
+    return Promise.reject(err)
+});
+
+
 axios.interceptors.response.use(
   function(response) {
+	  console.log(response)
     switch (response.data.code) {
       case 50000:
         Vue.prototype.$toast({ type: "error", message: "系统异常" });

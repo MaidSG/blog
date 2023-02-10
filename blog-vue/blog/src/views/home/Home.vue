@@ -127,7 +127,7 @@
                   :src="blogInfo.websiteConfig.websiteAvatar"
                 />
               </v-avatar>
-              <div style="font-size: 1.375rem;margin-top:0.625rem">
+              <div style="font-size: 1.375rem;margin-top:0.625rem;color: #0a3069">
                 {{ blogInfo.websiteConfig.websiteAuthor }}
               </div>
               <div style="font-size: 0.875rem;">
@@ -413,9 +413,12 @@ export default {
 @media (min-width: 760px) {
   .blog-title {
     font-size: 2.5rem;
+	text-shadow: 2px 2px 5px #000;
+	
   }
   .blog-intro {
     font-size: 1.5rem;
+	text-shadow: 2px 2px 5px #000;
   }
   .blog-contact {
     display: none;

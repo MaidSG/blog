@@ -324,6 +324,7 @@ export default {
           this.myMusicList = [res.data.songs[0]];
           this._getMusicType(-1);
           //第一次搜索直接播放
+		  console.log('直接播放')
         } else {
           this.myMusicList.push(res.data.songs[0]);
           //提示已经添加进去

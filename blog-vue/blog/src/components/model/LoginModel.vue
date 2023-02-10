@@ -43,19 +43,19 @@
           <div class="social-login-title">社交账号登录</div>
           <div class="social-login-wrapper">
             <!-- 微博登录 -->
-            <a
-              v-if="showLogin('weibo')"
-              class="mr-3 iconfont iconweibo"
-              style="color:#e05244"
-              @click="weiboLogin"
-            />
+<!--            <a-->
+<!--              v-if="showLogin('weibo')"-->
+<!--              class="mr-3 iconfont iconweibo"-->
+<!--              style="color:#e05244"-->
+<!--              @click="weiboLogin"-->
+<!--            />-->
             <!-- qq登录 -->
-            <a
-              v-if="showLogin('qq')"
-              class="iconfont iconqq"
-              style="color:#00AAEE"
-              @click="qqLogin"
-            />
+<!--            <a-->
+<!--              v-if="showLogin('qq')"-->
+<!--              class="iconfont iconqq"-->
+<!--              style="color:#00AAEE"-->
+<!--              @click="qqLogin"-->
+<!--            />-->
           </div>
         </div>
       </div>
