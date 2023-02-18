@@ -113,6 +113,14 @@
               />
               <el-checkbox label="gitee">是否展示</el-checkbox>
             </el-form-item>
+			<el-form-item label="WeChat">
+			  <el-input
+			    v-model="websiteConfigForm.wechat"
+			    size="small"
+			    style="width:400px;margin-right:1rem"
+			  />
+			  <el-checkbox label="wechat">是否展示</el-checkbox>
+			</el-form-item>
             <el-button
               type="primary"
               size="medium"
@@ -300,6 +308,7 @@ export default {
         qq: "",
         github: "",
         gitee: "",
+        wechat:"",
         userAvatar: "",
         touristAvatar: "",
         isReward: 1,
@@ -366,7 +375,7 @@ export default {
               message: data.message
             });
           } else {
-            this.$notify.error({
+            this.$notify.error({ 
               title: "失败",
               message: data.message
             });

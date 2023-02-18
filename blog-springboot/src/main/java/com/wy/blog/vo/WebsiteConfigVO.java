@@ -95,6 +95,12 @@ public class WebsiteConfigVO {
     private String gitee;
 
     /**
+     * wechat
+     */
+    @ApiModelProperty(name = "wechat", value = "wechat", required = true,dataType = "String")
+    private String wechat;
+
+    /**
      * 游客头像
      */
     @ApiModelProperty(name = "touristAvatar", value = "游客头像", required = true, dataType = "String")
