@@ -19,19 +19,17 @@
               class="mr-5 iconfont iconqq"
               target="_blank"
               :href="
-                        'http://wpa.qq.com/msgrd?v=3&uin=' +
-                          blogInfo.websiteConfig.qq +
-                          '&site=qq&menu=yes'
+                     blogInfo.websiteConfig.qq
                       "
           />
-		  <a
-		      v-if="isShowSocial('wechat')"
-		      class="mr-5 mdi mdi-wechat"
-		      target="_blank"
-		      :href="
+          <a
+              v-if="isShowSocial('wechat')"
+              class="mr-5 mdi mdi-wechat"
+              target="_blank"
+              :href="
 		                blogInfo.websiteConfig.wechat
 		              "
-		  />
+          />
           <a
               v-if="isShowSocial('github')"
               target="_blank"
@@ -181,9 +179,7 @@
                   class="mr-5 iconfont iconqq"
                   target="_blank"
                   :href="
-                  'http://wpa.qq.com/msgrd?v=3&uin=' +
-                    blogInfo.websiteConfig.qq +
-                    '&site=qq&menu=yes'
+                    blogInfo.websiteConfig.qq
                 "
               />
               <a
