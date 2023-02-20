@@ -14,7 +14,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/blog?serverTimezone=Asia/Shanghai&allowMultiQueries=true
     username: root
-    password: wy123456
+    password: 88888
     hikari:
       minimum-idle: 5
       # 空闲连接存活最大时间，默认600000（10分钟）
@@ -32,14 +32,14 @@ spring:
       connection-test-query: SELECT 1
   # redis配置
   redis:
-    host: 43.136.176.80
+    host: localhost
     port: 6379
-    password: wy123456
-    timeout: 60s
+    password: 88888
+    timeout: 120s
 
   # mq配置
   rabbitmq:
-    host: 43.136.176.80
+    host: localhost
     port: 5672
     username: guest
     password: guest
@@ -52,12 +52,12 @@ spring:
   # es配置 若搜索模式为mysql可删除
   elasticsearch:
     rest:
-      uris: 43.136.176.80:9200
+      uris: localhost:9200
   # 邮箱配置
   mail:
     host: smtp.qq.com
-    username: 512256763@qq.com
-    password: dwtqmnojprekbigb
+    username: 888888888888888
+    password: 8888888888888888
     default-encoding: UTF-8
     port: 587
     properties:
@@ -93,9 +93,9 @@ upload:
     # 本地文件存储路径
     path: /usr/local/upload/
   cos:
-    url: https://aurora-1312972600.cos.ap-chengdu.myqcloud.com/
-    secretId: AKID8UoyrgMtQAkAQaaNvOtWzNjw0uek9W0R
-    secretKey: JNBnJsKfsz8EDhBBISawFNNNCCzdfnpX
+    url:
+    secretId:
+    secretKey:
     region: ap-chengdu
     bucketName: aurora-1312972600
 
